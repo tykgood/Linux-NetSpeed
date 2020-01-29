@@ -2,6 +2,7 @@
    ———Tomy
    
 更新bbr及bbrplus内核为最新版（不含centos6及32位系统）
+#bbr魔改版可能无法使用
 
 一键使用：
 
