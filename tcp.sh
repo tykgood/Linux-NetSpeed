@@ -345,8 +345,8 @@ echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
  ${Green_font_prefix}3.${Font_color_suffix} 安装 Lotserver(锐速)内核
 ————————————加速管理————————————
  ${Green_font_prefix}4.${Font_color_suffix} 使用BBR加速
- ${Green_font_prefix}5.${Font_color_suffix} 使用BBR魔改版加速(可能无法使用)
- ${Green_font_prefix}6.${Font_color_suffix} 使用暴力BBR魔改版加速(可能无法使用)
+ ${Green_font_prefix}5.${Font_color_suffix} 使用BBR魔改版加速(不可用)
+ ${Green_font_prefix}6.${Font_color_suffix} 使用暴力BBR魔改版加速(不可用)
  ${Green_font_prefix}7.${Font_color_suffix} 使用BBRplus版加速
  ${Green_font_prefix}8.${Font_color_suffix} 使用Lotserver(锐速)加速
 ————————————杂项管理————————————
