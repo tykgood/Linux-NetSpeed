@@ -11,7 +11,7 @@ export PATH
 #=================================================
 
 sh_ver="1.3.2"
-github="raw.githubusercontent.com/chiakge/Linux-NetSpeed/master"
+github="raw.githubusercontent.com/Starktomy/NetSpeed/master"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
@@ -20,7 +20,7 @@ Tip="${Green_font_prefix}[注意]${Font_color_suffix}"
 
 #安装BBR内核
 installbbr(){
-	kernel_version="4.11.8"
+	kernel_version="5.4.14"
 	if [[ "${release}" == "centos" ]]; then
 		rpm --import http://${github}/bbr/${release}/RPM-GPG-KEY-elrepo.org
 		yum install -y http://${github}/bbr/${release}/${version}/${bit}/kernel-ml-${kernel_version}.rpm
@@ -29,13 +29,13 @@ installbbr(){
 		yum install -y http://${github}/bbr/${release}/${version}/${bit}/kernel-ml-devel-${kernel_version}.rpm
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbr && cd bbr
-		wget http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u10_amd64.deb
-		wget -N --no-check-certificate http://${github}/bbr/debian-ubuntu/linux-headers-${kernel_version}-all.deb
+		#wget http://security.debian.org/debian-security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb8u10_amd64.deb
+		#wget -N --no-check-certificate http://${github}/bbr/debian-ubuntu/linux-headers-${kernel_version}-all.deb
 		wget -N --no-check-certificate http://${github}/bbr/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
 		wget -N --no-check-certificate http://${github}/bbr/debian-ubuntu/${bit}/linux-image-${kernel_version}.deb
 	
-		dpkg -i libssl1.0.0_1.0.1t-1+deb8u10_amd64.deb
-		dpkg -i linux-headers-${kernel_version}-all.deb
+		#dpkg -i libssl1.0.0_1.0.1t-1+deb8u10_amd64.deb
+		#dpkg -i linux-headers-${kernel_version}-all.deb
 		dpkg -i linux-headers-${kernel_version}.deb
 		dpkg -i linux-image-${kernel_version}.deb
 		cd .. && rm -rf bbr
@@ -53,16 +53,17 @@ installbbr(){
 
 #安装BBRplus内核
 installbbrplus(){
-	kernel_version="4.14.129-bbrplus"
+	kernel_version="4.14.168-bbrplus"
 	if [[ "${release}" == "centos" ]]; then
 		wget -N --no-check-certificate https://${github}/bbrplus/${release}/${version}/kernel-${kernel_version}.rpm
 		yum install -y kernel-${kernel_version}.rpm
 		rm -f kernel-${kernel_version}.rpm
-		kernel_version="4.14.129_bbrplus" #fix a bug
+		kernel_version="4.14.168_bbrplus" #fix a bug
 	elif [[ "${release}" == "debian" || "${release}" == "ubuntu" ]]; then
 		mkdir bbrplus && cd bbrplus
-		wget -N --no-check-certificate https://down.ievo.top/.download/linux-headers-4.14.129-bbrplus.deb
-		wget -N --no-check-certificate https://down.ievo.top/.download/linux-image-4.14.129-bbrplus.deb
+               wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-headers-${kernel_version}.deb
+		wget -N --no-check-certificate http://${github}/bbrplus/debian-ubuntu/${bit}/linux-image-${kernel_version}.deb
+		dpkg -i linux-headers-${kernel_version}.deb
 		dpkg -i linux-headers-${kernel_version}.deb
 		dpkg -i linux-image-${kernel_version}.deb
 		cd .. && rm -rf bbrplus
@@ -339,13 +340,13 @@ echo && echo -e " TCP加速 一键安装管理脚本 ${Red_font_prefix}[v${sh_ve
   
  ${Green_font_prefix}0.${Font_color_suffix} 升级脚本
 ————————————内核管理————————————
- ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR/BBR魔改版内核
+ ${Green_font_prefix}1.${Font_color_suffix} 安装 BBR内核-5.4.14
  ${Green_font_prefix}2.${Font_color_suffix} 安装 BBRplus版内核 
  ${Green_font_prefix}3.${Font_color_suffix} 安装 Lotserver(锐速)内核
 ————————————加速管理————————————
  ${Green_font_prefix}4.${Font_color_suffix} 使用BBR加速
- ${Green_font_prefix}5.${Font_color_suffix} 使用BBR魔改版加速
- ${Green_font_prefix}6.${Font_color_suffix} 使用暴力BBR魔改版加速(不支持部分系统)
+ ${Green_font_prefix}5.${Font_color_suffix} 使用BBR魔改版加速(x)
+ ${Green_font_prefix}6.${Font_color_suffix} 使用暴力BBR魔改版加速(x)
  ${Green_font_prefix}7.${Font_color_suffix} 使用BBRplus版加速
  ${Green_font_prefix}8.${Font_color_suffix} 使用Lotserver(锐速)加速
 ————————————杂项管理————————————
