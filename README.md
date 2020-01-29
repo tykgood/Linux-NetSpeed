@@ -1,8 +1,8 @@
 # NetSpeed
-       ————Tomy
-##更新bbr及bbrplus内核为最新版（不含centos6及32位系统）
+   ———Tomy
+更新bbr及bbrplus内核为最新版（不含centos6及32位系统）
 
-##一键使用：
+一键使用：
 ```
 wget -N --no-check-certificate "https://raw.githubusercontent.com/Starktomy/NetSpeed/master/tcp.sh"
 chmod +x tcp.sh
