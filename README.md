@@ -11,7 +11,7 @@ wget -N --no-check-certificate "https://raw.githubusercontent.com/Starktomy/NetS
 chmod +x tcp.sh
 ./tcp.sh
 ```
-cloudflare版
+cloudflare版（适合国内及其他无法访问github机器）
 ```
 wget -N --no-check-certificate "https://raw.githubusercontent.com/Starktomy/NetSpeed/master/tcp-cf.sh"
 chmod +x tcp-cf.sh
