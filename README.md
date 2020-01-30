@@ -5,11 +5,17 @@
 #bbr魔改版可能无法使用
 
 一键使用：
-
+github版
 ```
 wget -N --no-check-certificate "https://raw.githubusercontent.com/Starktomy/NetSpeed/master/tcp.sh"
 chmod +x tcp.sh
 ./tcp.sh
+```
+cloudflare版
+```
+wget -N --no-check-certificate "https://raw.githubusercontent.com/Starktomy/NetSpeed/master/tcp-cf.sh"
+chmod +x tcp-cf.sh
+./tcp-cf.sh
 ```
 查看当前运行的算法 cat /proc/sys/net/ipv4/tcp_congestion_control
 
