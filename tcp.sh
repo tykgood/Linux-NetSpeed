@@ -10,7 +10,7 @@ export PATH
 #	Blog: https://www.ievo.top/ https://www.94ish.me/
 #=================================================
 
-sh_ver="1.3.2"
+sh_ver="1.3.3"
 github="raw.githubusercontent.com/Starktomy/NetSpeed/master"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
