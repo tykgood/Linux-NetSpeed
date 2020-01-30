@@ -5,13 +5,13 @@ export PATH
 #=================================================
 #	System Required: CentOS 6/7,Debian 8/9,Ubuntu 16+
 #	Description: BBR+BBRplus+Lotserver
-#	Version: 1.3.2
+#	Version: 1.3.3
 #	Author: 千影,cx9208，Tomy
 #	Blog: https://www.ievo.top/ https://www.94ish.me/
 #=================================================
 
-sh_ver="1.3.2"
-github="index.fucku.workers.dev/github/NetSpeed"
+sh_ver="1.3.3"
+github="netspeed.fucku.workers.dev"
 
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
